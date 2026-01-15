@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ETHIOPIA • Restaurant</title>
+    <meta
+      name="description"
+      content="ETHIOPIA Restaurant — not just food, an experience. Order Doro Wot, Kikil, Tibs, and Kitfo."
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="bg-noise" aria-hidden="true"></div>
+
+    <header class="topbar">
+      <div class="container topbar__inner">
+        <a class="brand" href="#home" aria-label="ETHIOPIA Home">
+          <span class="brand__dot" aria-hidden="true"></span>
+          <span class="brand__text">ETHIOPIA</span>
+        </a>
+
+        <nav class="nav" aria-label="Primary">
+          <a class="nav__link is-active" href="#home" data-nav="home">Home</a>
+          <a class="nav__link" href="#menu" data-nav="menu">Menu</a>
+          <a class="nav__link" href="#about" data-nav="about">About</a>
+          <a class="nav__link" href="#contact" data-nav="contact">Contact</a>
+        </nav>
+
+        <div class="actions">
+          <button class="icon-btn" id="btnFavorites" type="button" aria-label="Favorites">
+            <span class="icon" aria-hidden="true">♥</span>
+            <span class="badge" id="favoritesCount" aria-label="Favorites count">0</span>
+          </button>
+
+          <button class="icon-btn" id="btnCart" type="button" aria-label="Open cart">
+            <span class="icon" aria-hidden="true">🛒</span>
+            <span class="badge" id="cartCount" aria-label="Cart items count">0</span>
+          </button>
+
+          <button class="btn btn--primary" id="btnSignIn" type="button">Sign In</button>
+
+          <button class="hamburger" id="btnHamburger" type="button" aria-label="Open menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+
+      <div class="mobile-nav" id="mobileNav" hidden>
+        <a class="mobile-nav__link" href="#home" data-nav="home">Home</a>
+        <a class="mobile-nav__link" href="#menu" data-nav="menu">Menu</a>
+        <a class="mobile-nav__link" href="#about" data-nav="about">About</a>
+        <a class="mobile-nav__link" href="#contact" data-nav="contact">Contact</a>
+      </div>
+    </header>
+
+    <main id="home">
+      <section class="hero">
+        <div class="container hero__grid">
+          <div class="hero__copy">
+            <p class="hero__kicker">Huff &amp; Puff style • rebuilt for ETHIOPIA</p>
+            <h1 class="hero__title">
+              it’s not just<br />
+              Food, It’s an<br />
+              Experience.
+            </h1>
+            <p class="hero__sub">
+              Traditional Ethiopian flavors with modern comfort. Freshly prepared, perfectly spiced, and ready when you are.
+            </p>
+
+            <div class="hero__cta">
+              <a class="btn btn--primary" href="#menu">View Menu</a>
+              <button class="btn btn--ghost" id="btnBook" type="button">Book a Table</button>
+            </div>
+
+            <div class="hero__meta">
+              <div class="rating">
+                <div class="rating__stars" aria-label="5 star rating">
+                  ★★★★★
+                </div>
+                <div class="rating__text">
+                  <strong>4.9</strong> (2.1k reviews)
+                </div>
+              </div>
+
+              <div class="pill-group" aria-label="Highlights">
+                <span class="pill">Free delivery</span>
+                <span class="pill">Halal-friendly</span>
+                <span class="pill">Spice level</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero__visual" aria-label="Featured dish">
+            <div class="plate">
+              <div class="plate__inner" aria-hidden="true"></div>
+              <div class="plate__label">
+                <div class="plate__name">Chef’s Pick</div>
+                <div class="plate__dish">Doro Wot</div>
+              </div>
+            </div>
+
+            <div class="floating floating--a" aria-hidden="true"></div>
+            <div class="floating floating--b" aria-hidden="true"></div>
+            <div class="floating floating--c" aria-hidden="true"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="menu" id="menu">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <h2 class="section-title">Popular Dishes</h2>
+              <p class="section-sub">Add to cart, favorite your picks, and checkout—all saved in your browser.</p>
+            </div>
+
+            <div class="menu-tools">
+              <div class="segmented" role="tablist" aria-label="Filter menu">
+                <button class="segmented__btn is-active" type="button" data-filter="all">All</button>
+                <button class="segmented__btn" type="button" data-filter="mild">Mild</button>
+                <button class="segmented__btn" type="button" data-filter="medium">Medium</button>
+                <button class="segmented__btn" type="button" data-filter="hot">Hot</button>
+              </div>
+
+              <label class="search" aria-label="Search dishes">
+                <span class="search__icon" aria-hidden="true">⌕</span>
+                <input id="searchInput" type="search" placeholder="Search dishes…" autocomplete="off" />
+              </label>
+            </div>
+          </div>
+
+          <div class="grid" id="menuGrid" aria-live="polite"></div>
+        </div>
+      </section>
+
+      <section class="about" id="about">
+        <div class="container about__grid">
+          <div class="about__card">
+            <h2 class="section-title">About ETHIOPIA</h2>
+            <p class="section-sub">
+              From slow-simmered stews to sizzling skillet favorites, we craft a bold menu that balances tradition and comfort.
+            </p>
+            <ul class="bullets">
+              <li><strong>Made fresh</strong> daily</li>
+              <li><strong>Custom spice</strong> levels</li>
+              <li><strong>Fast pickup</strong> &amp; delivery</li>
+            </ul>
+            <button class="btn btn--ghost" id="btnStory" type="button">Read our story</button>
+          </div>
+
+          <div class="stats">
+            <div class="stat">
+              <div class="stat__num">12+</div>
+              <div class="stat__label">Years cooking</div>
+            </div>
+            <div class="stat">
+              <div class="stat__num">4</div>
+              <div class="stat__label">Signature dishes</div>
+            </div>
+            <div class="stat">
+              <div class="stat__num">15m</div>
+              <div class="stat__label">Avg pickup time</div>
+            </div>
+            <div class="stat">
+              <div class="stat__num">4.9★</div>
+              <div class="stat__label">Customer rating</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact" id="contact">
+        <div class="container contact__grid">
+          <div>
+            <h2 class="section-title">Contact</h2>
+            <p class="section-sub">Send a message or book a table. We reply quickly.</p>
+            <div class="contact-cards">
+              <div class="mini">
+                <div class="mini__k">Hours</div>
+                <div class="mini__v">Mon–Sun • 8:30–10:00</div>
+              </div>
+              <div class="mini">
+                <div class="mini__k">Phone</div>
+                <div class="mini__v"><a href="tel:+251973123228">+251 973123228</a></div>
+              </div>
+              <div class="mini">
+                <div class="mini__k">Address</div>
+                <div class="mini__v">Addis Ababa (demo)</div>
+              </div>
+            </div>
+          </div>
+
+          <form class="form" id="contactForm">
+            <div class="form__row">
+              <label class="field">
+                <span class="field__label">Name</span>
+                <input name="name" required placeholder="YOUR NAME" />
+              </label>
+              <label class="field">
+                <span class="field__label">Email</span>
+                <input name="email" type="email" required placeholder="EMAILL" />
+              </label>
+            </div>
+            <label class="field">
+              <span class="field__label">Message</span>
+              <textarea name="message" rows="4" required placeholder="How can we help?"></textarea>
+            </label>
+            <button class="btn btn--primary" type="submit">Send</button>
+            <p class="form__hint" id="contactHint" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <div class="footer__left">
+          <div class="brand brand--footer">
+            <span class="brand__dot" aria-hidden="true"></span>
+            <span class="brand__text">ETHIOPIA</span>
+          </div>
+          <p class="muted">© <span id="year"></span> ETHIOPIA Restaurant</p>
+        </div>
+        <div class="footer__right">
+          <a href="#home">Back to top</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Overlays -->
+    <div class="overlay" id="overlay" hidden></div>
+
+    <aside class="drawer" id="cartDrawer" aria-label="Cart" aria-hidden="true">
+      <div class="drawer__head">
+        <div>
+          <h3 class="drawer__title">Your Cart</h3>
+          <p class="drawer__sub" id="cartSub">0 items</p>
+        </div>
+        <button class="icon-btn icon-btn--plain" id="btnCloseCart" type="button" aria-label="Close cart">✕</button>
+      </div>
+
+      <div class="drawer__body" id="cartItems"></div>
+
+      <div class="drawer__foot">
+        <div class="totals">
+          <div class="totals__row">
+            <span>Subtotal</span>
+            <strong id="subtotal">$0.00</strong>
+          </div>
+          <div class="totals__row muted">
+            <span>Delivery</span>
+            <span id="delivery">$2.99</span>
+          </div>
+          <div class="totals__row totals__row--big">
+            <span>Total</span>
+            <strong id="total">$0.00</strong>
+          </div>
+        </div>
+        <button class="btn btn--primary btn--full" id="btnCheckout" type="button">Checkout</button>
+        <button class="btn btn--ghost btn--full" id="btnClearCart" type="button">Clear Cart</button>
+      </div>
+    </aside>
+
+    <div class="modal" id="modal" role="dialog" aria-modal="true" aria-hidden="true">
+      <div class="modal__panel" role="document">
+        <div class="modal__head">
+          <h3 class="modal__title" id="modalTitle"></h3>
+          <button class="icon-btn icon-btn--plain" id="btnCloseModal" type="button" aria-label="Close">✕</button>
+        </div>
+        <div class="modal__body" id="modalBody"></div>
+      </div>
+    </div>
+
+    <script src="./app.js" defer></script>
+  </body>
+</html>
+
